@@ -1,0 +1,8 @@
+bin/
+obj/
+out/
+publish/
+pkg/
+log/
+*.tar.gz
+*.tar.gz.sha256

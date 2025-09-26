@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="Cobilsys_CanGui.MainWindow"
+        Width="650" Height="600"
+        Title="Cobilsys CAN GUI">
+
+  <DockPanel LastChildFill="True">
+    <!-- 상단 버튼 -->
+    <StackPanel Orientation="Horizontal" DockPanel.Dock="Top"
+                HorizontalAlignment="Right" VerticalAlignment="Top" Margin="5" Spacing="10">
+      <Button x:Name="HomeButton" Content="홈" Width="80" Height="50" FontSize="20"
+              HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+      <Button x:Name="SettingsButton" Content="설정" Width="80" Height="50" FontSize="20"
+              HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+    </StackPanel>
+
+    <!-- 메인 화면 -->
+    <Grid>
+      <!-- 홈 패널 -->
+      <Grid x:Name="HomePanel" IsVisible="True"
+            RowDefinitions="Auto,Auto,Auto,Auto,Auto,*"
+            ColumnDefinitions="2*,Auto,2*" 
+            Margin="10" RowSpacing="10" ColumnSpacing="10">
+
+        <!-- RPM -->
+        <Border Grid.Row="0" Grid.Column="0"
+                BorderBrush="Black" BorderThickness="1"
+                Background="CornflowerBlue" Margin="2" Padding="6">
+          <TextBlock FontSize="25" FontWeight="Bold"
+                     VerticalAlignment="Center"
+                     HorizontalAlignment="Center"
+                     TextAlignment="Center">
+            <Run Text="RPM"/>
+            <LineBreak/>
+            <Run Text="(CAN)"/>
+          </TextBlock>
+        </Border>
+
+        <StackPanel Grid.Row="0" Grid.Column="1"
+                    Orientation="Vertical"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Spacing="8">
+          <Button x:Name="RpmUpButton" Content="▲"
+                  Width="80" Height="60" FontSize="25"
+                  Foreground="Red"
+                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+          <Button x:Name="RpmDownButton" Content="▼"
+                  Width="80" Height="60" FontSize="25"
+                  Foreground="Red"
+                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        </StackPanel>
+
+        <Border Grid.Row="0" Grid.Column="2"
+                BorderBrush="Black" BorderThickness="1"
+                Background="White" Margin="2" Padding="6">
+          <TextBlock x:Name="RpmStatus" Text="0 RPM" FontSize="25" FontWeight="Bold"
+                     VerticalAlignment="Center"
+                     HorizontalAlignment="Center"/>
+        </Border>
+
+        <!-- Speed -->
+        <Border Grid.Row="1" Grid.Column="0"
+                BorderBrush="Black" BorderThickness="1"
+                Background="CornflowerBlue" Margin="2" Padding="6">
+          <TextBlock FontSize="25" FontWeight="Bold"
+                     VerticalAlignment="Center"
+                     HorizontalAlignment="Center"
+                     TextAlignment="Center">
+            <Run Text="Speed"/>
+            <LineBreak/>
+            <Run Text="(CAN)"/>
+          </TextBlock>
+        </Border>
+
+        <StackPanel Grid.Row="1" Grid.Column="1"
+                    Orientation="Vertical"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Spacing="8">
+          <Button x:Name="SpeedUpButton" Content="▲" Width="80" Height="60" FontSize="25" Foreground="Red"
+                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+          <Button x:Name="SpeedDownButton" Content="▼" Width="80" Height="60" FontSize="25" Foreground="Red"
+                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        </StackPanel>
+
+        <Border Grid.Row="1" Grid.Column="2"
+                BorderBrush="Black" BorderThickness="1"
+                Background="White" Margin="2" Padding="6">
+          <TextBlock x:Name="SpeedStatus" Text="0 km/h" FontSize="25" FontWeight="Bold"
+                     VerticalAlignment="Center"
+                     HorizontalAlignment="Center"/>
+        </Border>
+
+        <!-- Engine -->
+        <Border Grid.Row="2" Grid.Column="0"
+                BorderBrush="Black" BorderThickness="1"
+                Background="CornflowerBlue" Margin="2" Padding="6">
+          <TextBlock Text="Engine Status" FontSize="25" FontWeight="Bold"
+                     VerticalAlignment="Center"
+                     HorizontalAlignment="Center"/>
+        </Border>
+
+        <StackPanel Grid.Row="2" Grid.Column="1"
+                    Orientation="Vertical"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Spacing="8">
+          <Button x:Name="EngineOnButton" Content="ON"
+                  Width="80" Height="50" FontSize="18"
+                  Foreground="Green"
+                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+          <Button x:Name="EngineOffButton" Content="OFF"
+                  Width="80" Height="50" FontSize="18"
+                  Foreground="Red"
+                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        </StackPanel>
+
+        <Border Grid.Row="2" Grid.Column="2"
+                BorderBrush="Black" BorderThickness="1"
+                Background="White" Margin="2" Padding="6">
+          <TextBlock x:Name="EngineStatus" Text="OFF" FontSize="25" FontWeight="Bold"
+                     VerticalAlignment="Center"
+                     HorizontalAlignment="Center"/>
+        </Border>
+
+        <!-- Tail Lamp -->
+        <Border Grid.Row="3" Grid.Column="0"
+                BorderBrush="Black" BorderThickness="1"
+                Background="CornflowerBlue" Margin="2" Padding="6">
+          <TextBlock Text="Tail Lamp" FontSize="25" FontWeight="Bold"
+                     VerticalAlignment="Center"
+                     HorizontalAlignment="Center"/>
+        </Border>
+
+        <StackPanel Grid.Row="3" Grid.Column="1"
+                    Orientation="Vertical"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Spacing="8">
+          <Button x:Name="TailLampOnButton" Content="ON" Width="80" Height="50" FontSize="18" Foreground="Green"
+                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+          <Button x:Name="TailLampOffButton" Content="OFF" Width="80" Height="50" FontSize="18" Foreground="Red"
+                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        </StackPanel>
+
+        <Border Grid.Row="3" Grid.Column="2"
+                BorderBrush="Black" BorderThickness="1"
+                Background="White" Margin="2" Padding="6">
+          <TextBlock x:Name="TailLampStatus" Text="OFF" FontSize="25" FontWeight="Bold"
+                     VerticalAlignment="Center"
+                     HorizontalAlignment="Center"/>
+        </Border>
+
+        <!-- Brake -->
+        <Border Grid.Row="4" Grid.Column="0"
+                BorderBrush="Black" BorderThickness="1"
+                Background="CornflowerBlue" Margin="2" Padding="6">
+          <TextBlock Text="Brake Switch" FontSize="25" FontWeight="Bold"
+                     VerticalAlignment="Center"
+                     HorizontalAlignment="Center"/>
+        </Border>
+
+        <StackPanel Grid.Row="4" Grid.Column="1"
+                    Orientation="Vertical"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Spacing="8">
+          <Button x:Name="BrakeOnButton" Content="ON" Width="80" Height="50" FontSize="18" Foreground="Green"
+                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+          <Button x:Name="BrakeOffButton" Content="OFF" Width="80" Height="50" FontSize="18" Foreground="Red"
+                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        </StackPanel>
+
+        <Border Grid.Row="4" Grid.Column="2"
+                BorderBrush="Black" BorderThickness="1"
+                Background="White" Margin="2" Padding="6">
+          <TextBlock x:Name="BrakeStatus" Text="OFF" FontSize="25" FontWeight="Bold"
+                     VerticalAlignment="Center"
+                     HorizontalAlignment="Center"/>
+        </Border>
+
+        <!-- 로그 -->
+        <ListBox x:Name="LogList" Grid.Row="5" Grid.ColumnSpan="3" Margin="8"/>
+      </Grid>
+
+      <!-- wifi -->
+      <StackPanel x:Name="SettingsPanel" IsVisible="False" Margin="20" Spacing="15"
+                  HorizontalAlignment="Center" VerticalAlignment="Center">
+        <TextBlock Text="와이파이 설정" FontSize="25" FontWeight="Bold" Margin="0,0,0,10"/>
+
+        <Button x:Name="WifiRefreshButton" Content="Wi-Fi 목록 새로고침"
+                Width="250" Height="50" FontSize="18" Margin="0,0,0,10"
+                HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+        <TextBlock Text="연결 가능한 Wi-Fi 목록" FontSize="18" Margin="0,0,0,5"/>
+
+        <ListBox x:Name="WifiListBox"
+                 Width="500" Height="300"
+                 FontSize="18"
+                 Background="Transparent"
+                 BorderThickness="0">
+          <ListBox.ItemTemplate>
+            <DataTemplate x:DataType="x:String">
+              <Border Margin="5"
+                      Padding="10"
+                      Background="#444"
+                      CornerRadius="6">
+                <TextBlock Text="{Binding .}" Foreground="White"/>
+              </Border>
+            </DataTemplate>
+          </ListBox.ItemTemplate>
+        </ListBox>
+
+        <StackPanel Orientation="Horizontal" Spacing="10" Margin="0,10,0,0"
+                    HorizontalAlignment="Center">
+          <TextBlock Text="비밀번호:" Width="80" VerticalAlignment="Center" FontSize="16"/>
+          <TextBox x:Name="WifiPasswordBox" Width="300" Height="50" FontSize="18" PasswordChar="*"/>
+        </StackPanel>
+
+        <Button x:Name="WifiConnectButton" Content="Wi-Fi 연결"
+                Width="200" Height="60" FontSize="18" Margin="0,10,0,0"
+                HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+        <Separator Margin="10"/>
+
+        <Button x:Name="UpdateButton" Content="업데이트"
+                Width="200" Height="60" FontSize="18"
+                HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+        <Border BorderBrush="Gray" BorderThickness="1" Margin="0,5,0,0" Padding="5" Height="150">
+        <ListBox x:Name="UpdateLogList" FontSize="14"/>
+        </Border>
+
+      </StackPanel>
+    </Grid>
+  </DockPanel>
+</Window>

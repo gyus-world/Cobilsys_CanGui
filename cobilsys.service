@@ -1,0 +1,14 @@
+[Unit] 
+Description=Cobilsys CAN GUI 
+After=graphical.target 
+ 
+[Service] 
+Type=simple 
+User=cobilsys 
+WorkingDirectory=/home/cobilsys/Cobilsys_CanGui 
+ExecStart=/home/cobilsys/Cobilsys_CanGui/run.sh 
+Restart=always 
+Environment=DISPLAY=:0 
+ 
+[Install] 
+WantedBy=graphical.target 

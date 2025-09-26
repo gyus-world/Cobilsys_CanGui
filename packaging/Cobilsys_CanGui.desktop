@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Cobilsys CAN GUI
+Comment=CAN 통신과 GUI 제어 프로그램
+Exec=/usr/local/Cobilsys_CanGui/run.sh
+Icon=Cobilsys_CanGui
+Terminal=false
+Type=Application
+Categories=Utility;
+EOF
