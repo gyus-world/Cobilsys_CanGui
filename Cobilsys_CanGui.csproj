@@ -42,7 +42,6 @@
   <ItemGroup>
     <None Include="run.sh" CopyToOutputDirectory="Always" />
     <None Include="update.sh" CopyToOutputDirectory="Always" />
-    <None Include="Cobilsys_CanGui.desktop" CopyToOutputDirectory="Always" />
     <None Include="NLog.config" CopyToOutputDirectory="Always" />
   </ItemGroup>
 </Project>
