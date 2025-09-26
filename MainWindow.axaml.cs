@@ -79,7 +79,7 @@ namespace Cobilsys_CanGui
                     var psi = new ProcessStartInfo
                     {
                         FileName = "bash",
-                        ArgumentList = { "-c", "/home/cobilsys/Cobilsys_CanGui/update.sh" },
+                        ArgumentList = { "-c", "/usr/local/Cobilsys_CanGui/update.sh" },
                         RedirectStandardOutput = true,
                         RedirectStandardError = true,
                         UseShellExecute = false,

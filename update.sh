@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
 
-APP_DIR="/home/cobilsys/Cobilsys_CanGui"
+APP_DIR="$(cd "$(dirname "$0")" && pwd)"
 ASSET_URL="${ASSET_URL:-https://github.com/gyus-world/Cobilsys_CanGui/releases/latest/download/linux-arm.tar.gz}"
 ASSET_SUM_URL="${ASSET_SUM_URL:-${ASSET_URL}.sha256}"
 
